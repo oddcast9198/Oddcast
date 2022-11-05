@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_curved_corners"
+        android:paddingBottom="@dimen/_40sdp"
+        android:isScrollContainer="true"
+        android:id="@+id/rootView">
+
+        <View
+            android:id="@+id/viewOne"
+            android:layout_width="@dimen/_128sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/grey_rounded_corner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bundleDetailsLayout"
+            app:layout_constraintTop_toBottomOf="@+id/viewOne">
+
+
+
+            <TextView
+                android:id="@+id/tvLessonLabel"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_16sdp"
+                android:text="@string/text_mobile_number_for_google"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:padding="@dimen/_12sdp"
+                android:background="@drawable/edit_text_border"
+                android:backgroundTint="@color/hintColor"
+                android:inputType="number"
+                android:hint="@string/text_mobile_number"
+                android:singleLine="true"
+                app:layout_constraintTop_toBottomOf="@+id/tvLessonLabel" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonGoogleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginHorizontal="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_55sdp"
+                android:background="@drawable/rounded_corner_button"
+                android:text="@string/text_login_with_google"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintTop_toBottomOf="@id/etMobileNumber" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

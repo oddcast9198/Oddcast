@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.onboarding.LoginFragment"
+    android:background="@color/greyScaleprimary">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        style="@style/TextViewStyle.H2"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/greyScalePrimary4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_44sdp"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/rounded_corner_button_new"
+        android:backgroundTint="@color/greyScalePrimary1"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarLoading"
+        tools:layout_editor_absoluteX="26dp">
+
+        <com.hbb20.CountryCodePicker
+            android:layout_marginStart="@dimen/_12sdp"
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_arrowColor="@color/white"
+            app:ccp_contentColor="@color/white"
+            app:ccp_countryPreference="us,in"
+            app:ccp_flagBorderColor="@color/white" />
+
+        <EditText
+            android:id="@+id/editText_carrierNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:editable="false"
+            android:hint="phone"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSendOtp"
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/accentPrimary"
+        android:textColor="@color/offWhite"
+        android:fontFamily="@font/notosansmedium"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Send otp"
+        android:textSize="@dimen/_18sdp"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:background="@drawable/rounded_corner_button_new"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPhone"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/editTextPhone"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhone" />
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBarLoading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="88dp"
+        android:layout_height="72dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.286" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/btnSignInWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/rounded_corner_button_new"
+        android:backgroundTint="@color/greyScalePrimary1"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendOtp">
+
+
+        <TextView
+           android:layout_marginVertical="4dp"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:drawableStart="@drawable/flat_color_icons_google"
+            android:drawablePadding="@dimen/_12sdp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Google"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "542148642057",
+    "project_id": "oddcast-9ebe7",
+    "storage_bucket": "oddcast-9ebe7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542148642057:android:a446349fc72a5be27dffd8",
+        "android_client_info": {
+          "package_name": "com.seamless.oddcast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542148642057-uh79bikuv2o6fuqavsipnn4o8aaad4jg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC88CuRrv-JbvhWytgCfliCj31CzNM2Tpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542148642057-uh79bikuv2o6fuqavsipnn4o8aaad4jg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
